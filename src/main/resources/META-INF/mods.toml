@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[47,)" # Para 1.20.1, el 47 es el mínimo de Forge
+license="MIT"
+
+[[mods]]
+modId="takecare"
+version="0.0.1"
+displayName="Take care"
+description='''
+Un mod de prueba
+'''
