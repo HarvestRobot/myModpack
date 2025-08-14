@@ -1,0 +1,12 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0" : "takecare:item/sapphire"
+  }
+}
+
+  parent determina cómo se muestra el objeto cuando lo tienes en la mano o está en el inventario.
+  En este caso, "item/generated" es un tipo de objeto normal y corriente que coge el modelo 3D y
+  lo ajusta a tu mano para que te salga
+
+  textures coge la textura con la ruta takecare -> textures -> item -> sapphire
