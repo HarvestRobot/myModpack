@@ -3,9 +3,9 @@ loaderVersion="[47,)" # Para 1.20.1, el 47 es el mínimo de Forge
 license="MIT"
 
 [[mods]]
-modId="takecare"
+modId="tutorialmod"
 version="0.0.1"
-displayName="Take care"
+displayName="Tutorial mod"
 description='''
 Un mod de prueba
 '''

@@ -1,0 +1,10 @@
+{
+  "item.tutorialmod.sapphire" : "Sapphire",
+  "item.tutorialmod.raw_sapphire" : "Raw sapphire",
+  "item.tutorialmod.bandaid" : "Band aid",
+
+  "block.tutorialmod.sapphire_block": "Block of sapphire",
+  "block.tutorialmod.raw_sapphire_block": "Block of raw sapphire",
+
+  "creativetab.tutorial_tab" : "Tutorial Mod"
+}

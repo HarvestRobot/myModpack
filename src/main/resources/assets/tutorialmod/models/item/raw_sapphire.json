@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0" : "takecare:item/sapphire"
+    "layer0" : "tutorialmod:item/raw_sapphire"
   }
 }

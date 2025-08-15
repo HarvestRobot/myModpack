@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0" : "takecare:item/bandaid"
+    "layer0" : "tutorialmod:item/bandaid"
   }
 }
