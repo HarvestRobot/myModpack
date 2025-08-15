@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nebulosacrafts.takecare.item.ModItems;
+import net.nebulosacrafts.takecare.item.TakeCareCreativeModeTabs;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -31,6 +32,9 @@ public class TakeCare
 
         // Register the items
         ModItems.register(modEventBus);
+
+        // Register the creative tabs
+        TakeCareCreativeModeTabs.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -53,6 +57,7 @@ public class TakeCare
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.RAW_SAPPHIRE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){

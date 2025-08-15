@@ -15,6 +15,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TakeCare.MOD_ID);
 
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BANDAID = ITEMS.register("bandaid", () -> new Item(new Item.Properties()));
 
     // Método estático para poder acceder a registrar los elementos en el eventBus que habrá en la clase main
