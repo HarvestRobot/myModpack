@@ -14,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nebulosacrafts.tutorialmod.TutorialMod;
+import net.nebulosacrafts.tutorialmod.block.custom.SoundBlock;
 import net.nebulosacrafts.tutorialmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -50,6 +51,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
                     .strength(5f)
                     .requiresCorrectToolForDrops(), UniformInt.of(3,7)));
+
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock(
+            "sound_block", () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> blockToRegister){
         RegistryObject<T> blockToReturn = BLOCKS.register(name, blockToRegister);
