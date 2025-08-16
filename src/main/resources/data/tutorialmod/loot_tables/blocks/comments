@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:block",
+  "pools": [ ... ],
+  "random_sequence": "tutorialmod:blocks/sapphire_block"
+}
+
+POOLS
+
+Un pool es como una bolsa de premios.
+Cada vez que el juego quiere determinar qué dropea un bloque,
+mira dentro de la bolsa y hace unas tiradas (rolls) para ver qué sale.
+  Un bloque puede tener uno o varios pools.
+  Si tiene varios, el juego ejecuta todos los pools y junta sus resultados.
+random_sequence -> para asegurar que la aleatoriedad sea consistente.
+
+Dentro de Pools:
+
+{
+  "bonus_rolls": 0.0,
+  "conditions": [
+    {
+      "condition": "minecraft:survives_explosion"
+    }
+  ],
+  "entries": [
+    {
+      "type": "minecraft:item",
+      "name": "tutorialmod:sapphire_block"
+    }
+  ],
+  "rolls": 1.0
+}
+
+ROLLS
+número de intentos de obtener un objeto de este pool.
+
+"rolls": 1 -> siempre se hace 1 tirada.
+"rolls": 2 -> siempre se hacen 2 tiradas (por lo tanto, pueden salir 2 objetos de esa lista).
+"rolls": { "min": X, "max": Y } -> número aleatorio de tiradas entre X e Y.
+bonus_rolls -> tiradas adicionales posibles.
+
+bonus_rolls -> objetos adicionales que pueden dropearse, por ejemplo, con un encantamiento de fortuna. Si es
+0, el encantamiento de fortuna no hace nada.
+
+CONDITIONS
+En cada pool puedes poner condiciones que deciden si esa bolsa de loot se aplica o no.
+Por ejemplo:
+- que el bloque solo dropee si se pica con un pico de hierro,
+- que solo funcione si usas toque de seda,
+- o lo que tenemos aquí: que sobreviva a una explosión.
+
+  survives_explosion -> si el bloque explota solo soltará el loot si sobreviviría a la explosión
+  “Este drop solo aparecerá si el cálculo aleatorio dice que sobrevive a la explosión”.
+
+
+ENTRIES
+Qué objetos pueden salir de la pool, en este caso, el bloque de zafiro
+La probabilidad de que salga un objeto se puede modificar con el campo weight
+"entries": [
+  { "type": "minecraft:item", "name": "minecraft:apple", "weight": 1 },
+  { "type": "minecraft:item", "name": "minecraft:stick", "weight": 3 }
+]
+En este ejemplo, se dropearían 2 items. La manzana tendría 1/4 de dropearse, y el palo, 3/4.
+
