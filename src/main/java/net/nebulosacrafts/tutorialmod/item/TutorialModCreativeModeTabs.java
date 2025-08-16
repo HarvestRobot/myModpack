@@ -35,6 +35,7 @@ public class TutorialModCreativeModeTabs {
                                 pOutput.accept(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
 
                                 pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+                                pOutput.accept(ModItems.STRAWBERRY.get());
                                 /*
                                 Para poner todos los objetos de ModItems en la misma Tab ->
                                 .displayItems((pParameters, pOutput) -> {

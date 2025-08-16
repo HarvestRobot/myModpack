@@ -20,6 +20,9 @@ public class ModItems {
     public static final RegistryObject<Item> BANDAID = ITEMS.register("bandaid", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", () -> new MetalDetectorItem(new Item.Properties().durability(100)));
 
+    public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry", () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+
+
     // Método estático para poder acceder a registrar los elementos en el eventBus que habrá en la clase main
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
