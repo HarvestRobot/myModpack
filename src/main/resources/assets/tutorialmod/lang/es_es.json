@@ -1,0 +1,25 @@
+{
+  "item.tutorialmod.sapphire" : "Zafiro",
+  "item.tutorialmod.raw_sapphire" : "Trozo de zafiro",
+  "item.tutorialmod.bandaid" : "Tirita",
+  "item.tutorialmod.metal_detector" : "Detector de metales",
+  "item.tutorialmod.strawberry" : "Fresa",
+  "item.tutorialmod.pine_cone" : "Piña",
+
+  "block.tutorialmod.sapphire_block": "Bloque de zafiro",
+  "block.tutorialmod.raw_sapphire_block": "Bloque de trozos de zafiro",
+
+  "block.tutorialmod.sapphire_ore": "Mena de zafiro",
+  "block.tutorialmod.nether_sapphire_ore": "Mena de zafiro del Nether",
+  "block.tutorialmod.end_stone_sapphire_ore": "Mena de zafiro del end",
+  "block.tutorialmod.deepslate_sapphire_ore": "Mena de zafiro de pizarra profunda",
+
+  "block.tutorialmod.sound_block" : "Bloque de sonido",
+
+  "item.tutorialmod.healing_syringe": "Jeringa de curación",
+  "item.tutorialmod.strange_syringe": "Jeringa rara",
+  "item.tutorialmod.syringe": "Jeringa",
+
+  "creativetab.tutorial_tab" : "Tutorial Mod",
+  "tooltip.tutorialmod.metal_detector.tooltip": "Con esto podrías encontrar dónde está enterrada la abuela"
+}
