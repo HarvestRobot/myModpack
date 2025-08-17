@@ -25,6 +25,8 @@ public class MetalDetectorItem extends Item {
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
+        int desiredDepth = 64;
+
         if (!pContext.getLevel().isClientSide()){
             // aquí estamos solo mirando desde la parte del servidor
             BlockPos positionClicked = pContext.getClickedPos();
@@ -33,7 +35,7 @@ public class MetalDetectorItem extends Item {
 
             boolean foundBlock = false;
 
-            for (int i = 0; i<=positionClicked.getY()+64; i++){
+            for (int i = 0; i<=positionClicked.getY()+desiredDepth; i++){
                 BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));
                 if (isValuableBlock(state)){
                     outputValuableCoordinates(positionClicked.below(i), player, state.getBlock());

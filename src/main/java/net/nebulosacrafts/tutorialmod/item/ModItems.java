@@ -7,7 +7,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nebulosacrafts.tutorialmod.TutorialMod;
 import net.nebulosacrafts.tutorialmod.block.custom.FuelItem;
+import net.nebulosacrafts.tutorialmod.item.custom.HealingSyringeItem;
 import net.nebulosacrafts.tutorialmod.item.custom.MetalDetectorItem;
+import net.nebulosacrafts.tutorialmod.item.custom.StrangeSyringeItem;
 
 public class ModItems {
 
@@ -20,6 +22,10 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BANDAID = ITEMS.register("bandaid", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", () -> new MetalDetectorItem(new Item.Properties().durability(100)));
+
+    //syringes
+    public static final RegistryObject<Item> HEALING_SYRINGE = ITEMS.register("healing_syringe", () -> new HealingSyringeItem(new Item.Properties().durability(1)));
+    public static final RegistryObject<Item> STRANGE_SYRINGE = ITEMS.register("strange_syringe", () -> new StrangeSyringeItem(new Item.Properties().durability(1)));
 
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry", () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
 

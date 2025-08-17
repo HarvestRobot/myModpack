@@ -16,6 +16,9 @@
 
   "block.tutorialmod.sound_block" : "Sound block",
 
+  "item.tutorialmod.healing_syringe": "Healing syringe",
+  "item.tutorialmod.strange_syringe": "Strange syringe",
+
   "creativetab.tutorial_tab" : "Tutorial Mod",
   "tooltip.tutorialmod.metal_detector.tooltip": "You could probably find where grandma is buried"
 }

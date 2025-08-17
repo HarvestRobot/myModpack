@@ -37,6 +37,10 @@ public class TutorialModCreativeModeTabs {
                                 pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                                 pOutput.accept(ModItems.STRAWBERRY.get());
                                 pOutput.accept(ModItems.PINE_CONE.get());
+
+                                // syringes
+                                pOutput.accept(ModItems.HEALING_SYRINGE.get());
+                                pOutput.accept(ModItems.STRANGE_SYRINGE.get());
                                 /*
                                 Para poner todos los objetos de ModItems en la misma Tab ->
                                 .displayItems((pParameters, pOutput) -> {
