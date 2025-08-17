@@ -1,10 +1,11 @@
-package net.nebulosacrafts.tutorialmod.item.custom;
+package net.nebulosacrafts.tutorialmod.item.custom.medic;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -23,7 +24,8 @@ public class StrangeSyringeItem extends Item {
             @NotNull InteractionHand pUsedHand) {
 
         if (!pPlayer.level().isClientSide){
-            if (pInteractionTarget instanceof Player target) {
+            if (pInteractionTarget instanceof Animal target) {
+                ItemStack stack = pPlayer.getItemInHand(pUsedHand);
 
                 //el efecto es aleatorio, puede no ocurrir
                 float roll = pPlayer.getRandom().nextFloat();
@@ -36,8 +38,10 @@ public class StrangeSyringeItem extends Item {
                     target.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200));
                 }
 
-                pStack.hurtAndBreak(1, pPlayer,
-                        player -> player.broadcastBreakEvent(player.getUsedItemHand()));
+                // consumirlo
+                if (!pPlayer.getAbilities().instabuild) {
+                    stack.shrink(1);
+                }
             }
         }
         return InteractionResult.SUCCESS;

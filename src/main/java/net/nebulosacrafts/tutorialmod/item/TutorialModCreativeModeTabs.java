@@ -41,6 +41,7 @@ public class TutorialModCreativeModeTabs {
                                 // syringes
                                 pOutput.accept(ModItems.HEALING_SYRINGE.get());
                                 pOutput.accept(ModItems.STRANGE_SYRINGE.get());
+                                pOutput.accept(ModItems.SYRINGE.get());
                                 /*
                                 Para poner todos los objetos de ModItems en la misma Tab ->
                                 .displayItems((pParameters, pOutput) -> {

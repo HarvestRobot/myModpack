@@ -18,6 +18,7 @@
 
   "item.tutorialmod.healing_syringe": "Healing syringe",
   "item.tutorialmod.strange_syringe": "Strange syringe",
+  "item.tutorialmod.syringe": "Syringe",
 
   "creativetab.tutorial_tab" : "Tutorial Mod",
   "tooltip.tutorialmod.metal_detector.tooltip": "You could probably find where grandma is buried"
