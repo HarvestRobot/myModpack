@@ -1,73 +1,39 @@
 package net.nebulosacrafts.tutorialmod.item.custom.medic;
 
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.context.UseOnContext;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.Objects;
-
-public class HealingSyringeItem extends Item {
+/**
+ * Syringe that heals 2 hearts to someone or yourself when used
+ * Will only be used if you/target are damaged.
+ */
+public class HealingSyringeItem extends UsableSyringe {
 
     public HealingSyringeItem(Properties pProperties) {
         super(pProperties);
     }
 
-    // Si se usa en alguien:
     @Override
-    public @NotNull InteractionResult interactLivingEntity(
-            @NotNull ItemStack pStack, Player pPlayer,
-            @NotNull LivingEntity pInteractionTarget,
-            @NotNull InteractionHand pUsedHand) {
+    public void personalAction(Player player, ItemStack stack){
+        if(player.isHurt()){
+            player.heal(4.0F); // cura 2 corazones
 
-        if (!pPlayer.level().isClientSide){
-            if (pInteractionTarget instanceof Animal target) {
-                ItemStack stack = pPlayer.getItemInHand(pUsedHand);
-
-                target.heal(4.0F); // cura 2 corazones
-
-                // consumirlo
-                if (!pPlayer.getAbilities().instabuild) {
-                    stack.shrink(1);
-                }
+            if (!player.getAbilities().instabuild) {
+                stack.shrink(1); // consumir jeringa
             }
         }
-        return InteractionResult.SUCCESS;
     }
 
-    // Para usarlo en uno mismo:
     @Override
-    public @NotNull InteractionResult useOn(UseOnContext pContext) {
-        Player player = pContext.getPlayer();
-        ItemStack stack = player.getItemInHand(pContext.getHand());
+    public void targetedAction(Player player, LivingEntity target, ItemStack stack) {
 
-        // Marca que empezó a “cargar” para este jugador
-        player.startUsingItem(pContext.getHand());
+        if (target.getHealth() < target.getMaxHealth()) {
+            target.heal(4.0F);
 
-        Objects.requireNonNull(player).heal(4.0F); // cura 2 corazones
-
-        // consumirlo
-        if (!player.getAbilities().instabuild) {
-            stack.shrink(1);
+            if (!player.getAbilities().instabuild) {
+                stack.shrink(1); // consumir jeringa
+            }
         }
-
-        return InteractionResult.CONSUME;
     }
-
-    @Override
-    public int getUseDuration(@NotNull ItemStack stack) {
-        return 1000; // tiempo máximo de carga
-    }
-
-    @Override
-    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack stack) {
-        return UseAnim.BOW; // animación de carga
-    }
-
 }
