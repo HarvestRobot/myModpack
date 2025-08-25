@@ -37,6 +37,19 @@ public class TutorialModCreativeModeTabs {
                                 pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                                 pOutput.accept(ModItems.STRAWBERRY.get());
                                 pOutput.accept(ModItems.PINE_CONE.get());
+
+                                //furniture
+                                pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());
+                                pOutput.accept(ModBlocks.SAPPHIRE_SLAB.get());
+                                pOutput.accept(ModBlocks.SAPPHIRE_BUTTON.get());
+                                pOutput.accept(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
+
+                                pOutput.accept(ModBlocks.SAPPHIRE_FENCE.get());
+                                pOutput.accept(ModBlocks.SAPPHIRE_FENCE_GATE.get());
+                                pOutput.accept(ModBlocks.SAPPHIRE_WALL.get());
+
+                                pOutput.accept(ModBlocks.SAPPHIRE_DOOR.get());
+                                pOutput.accept(ModBlocks.SAPPHIRE_TRAPDOOR.get());
                                 /*
                                 Para poner todos los objetos de ModItems en la misma Tab ->
                                 .displayItems((pParameters, pOutput) -> {

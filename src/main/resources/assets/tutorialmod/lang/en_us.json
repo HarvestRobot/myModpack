@@ -14,6 +14,18 @@
   "block.tutorialmod.end_stone_sapphire_ore": "End sapphire ore",
   "block.tutorialmod.deepslate_sapphire_ore": "Deepslate sapphire ore",
 
+  "block.tutorialmod.sapphire_stairs": "Sapphire stairs",
+  "block.tutorialmod.sapphire_door": "Sapphire door",
+  "block.tutorialmod.sapphire_trapdoor": "Sapphire trapdoor",
+  "block.tutorialmod.sapphire_wall": "Sapphire wall",
+  "block.tutorialmod.sapphire_fence": "Sapphire fence",
+  "block.tutorialmod.sapphire_fence_gate": "Sapphire fence gate",
+  "block.tutorialmod.sapphire_button": "Sapphire button",
+  "block.tutorialmod.sapphire_slab": "Sapphire slab",
+  "block.tutorialmod.sapphire_pressure_plate": "Sapphire pressure plate",
+
+
+
   "block.tutorialmod.sound_block" : "Sound block",
 
   "creativetab.tutorial_tab" : "Tutorial Mod",
